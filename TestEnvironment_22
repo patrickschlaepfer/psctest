@@ -1,0 +1,34 @@
+<emds.epi.decl.modell.TestEnvironment id="1">
+  <name>test_environment</name>
+  <processSenarioID>5c3294cb-1cea-4a7b-99ca-e9d899289af4</processSenarioID>
+  <ID>22</ID>
+  <revisionNumber>1474484862056</revisionNumber>
+  <groupId>-1</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <testSettings id="2">
+    <entry>
+      <string>CELLPORT</string>
+      <string>8899</string>
+    </entry>
+    <entry>
+      <string>HTTPSPORT</string>
+      <string>8843</string>
+    </entry>
+    <entry>
+      <string>CELLMODE</string>
+      <string>0</string>
+    </entry>
+    <entry>
+      <string>HTTPSAUTHPORT</string>
+      <string>8844</string>
+    </entry>
+    <entry>
+      <string>INCLUDES</string>
+      <string>0</string>
+    </entry>
+    <entry>
+      <string>HTTPPORT</string>
+      <string>8819</string>
+    </entry>
+  </testSettings>
+</emds.epi.decl.modell.TestEnvironment>

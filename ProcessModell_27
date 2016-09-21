@@ -1,0 +1,149 @@
+<ProcessModel id="1">
+  <name>model</name>
+  <description></description>
+  <processSenarioID>5c3294cb-1cea-4a7b-99ca-e9d899289af4</processSenarioID>
+  <ID>27</ID>
+  <revisionNumber>1474484791560</revisionNumber>
+  <groupId>5</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <isPersistent>false</isPersistent>
+  <useRecovery>false</useRecovery>
+  <isMassData>false</isMassData>
+  <isFifo>false</isFifo>
+  <ensureEventFifo>false</ensureEventFifo>
+  <priority>NORMAL</priority>
+  <priorityDerived>false</priorityDerived>
+  <logLevel>0</logLevel>
+  <deleteLog>false</deleteLog>
+  <redeployPolicy>0</redeployPolicy>
+  <volatilePoicy>0</volatilePoicy>
+  <manualRestart>false</manualRestart>
+  <processTyp>0</processTyp>
+  <clusterMode>0</clusterMode>
+  <businessKeys id="2"/>
+  <processObjects id="3">
+    <EventStart id="4">
+      <processModel reference="1"/>
+      <id>101</id>
+      <displayText>start</displayText>
+      <inAssignments id="5"/>
+      <outAssignments id="6"/>
+      <xpos>140.0</xpos>
+      <ypos>150.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventStart>
+    <ActivityMapping id="7">
+      <processModel reference="1"/>
+      <id>103</id>
+      <displayText>map map</displayText>
+      <inAssignments id="8">
+        <Assignment id="9">
+          <targetPropertyName>SRC</targetPropertyName>
+          <sourceExpr id="10">
+            <expression>CURMSG</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </inAssignments>
+      <outAssignments id="11">
+        <Assignment id="12">
+          <targetPropertyName>CURMSG</targetPropertyName>
+          <sourceExpr id="13">
+            <expression>MSG</expression>
+            <implementingLanguage>Java</implementingLanguage>
+          </sourceExpr>
+        </Assignment>
+      </outAssignments>
+      <xpos>270.0</xpos>
+      <ypos>140.0</ypos>
+      <width>100.0</width>
+      <height>40.0</height>
+      <intermediateEvents id="14"/>
+      <retryCount>5</retryCount>
+      <retryDelay id="15">
+        <unit>SECOND</unit>
+        <value>30</value>
+      </retryDelay>
+      <userDefined>false</userDefined>
+      <messageSizeStrategy>0</messageSizeStrategy>
+      <m__mapping id="16">5c3294cb-1cea-4a7b-99ca-e9d899289af4:MessageMapping:26</m__mapping>
+      <properties class="linked-list" id="17">
+        <Property id="18">
+          <name>SRC</name>
+          <type class="ArgumentType">message</type>
+          <messageType id="19">5c3294cb-1cea-4a7b-99ca-e9d899289af4:MessageType:24</messageType>
+          <usagePattern>INPUT</usagePattern>
+          <description>input message</description>
+          <requiredOnInput>true</requiredOnInput>
+        </Property>
+        <Property id="20">
+          <name>MSG</name>
+          <type class="ArgumentType">message</type>
+          <messageType id="21">5c3294cb-1cea-4a7b-99ca-e9d899289af4:MessageType:25</messageType>
+          <usagePattern>OUTPUT</usagePattern>
+          <description>result message</description>
+          <requiredOnInput>true</requiredOnInput>
+        </Property>
+      </properties>
+    </ActivityMapping>
+    <EventEnd id="22">
+      <processModel reference="1"/>
+      <id>106</id>
+      <displayText>end</displayText>
+      <inAssignments id="23"/>
+      <outAssignments id="24"/>
+      <xpos>510.0</xpos>
+      <ypos>150.0</ypos>
+      <width>20.0</width>
+      <height>20.0</height>
+    </EventEnd>
+  </processObjects>
+  <annotations id="25"/>
+  <edges id="26">
+    <EdgeSequence id="27">
+      <processModel reference="1"/>
+      <id>105</id>
+      <m__arNode id="28">
+        <EventStart reference="4"/>
+        <ActivityMapping reference="7"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+    </EdgeSequence>
+    <EdgeSequence id="29">
+      <processModel reference="1"/>
+      <id>108</id>
+      <m__arNode id="30">
+        <ActivityMapping reference="7"/>
+        <EventEnd reference="22"/>
+      </m__arNode>
+      <bentStyle>STRAIGHT</bentStyle>
+      <defaultEdge>false</defaultEdge>
+    </EdgeSequence>
+  </edges>
+  <properties id="31">
+    <Property id="32">
+      <name>CURMSG</name>
+      <type class="ArgumentType">message</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>current message</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="33">
+      <name>ERROR</name>
+      <type class="ComplexType" id="34">error</type>
+      <usagePattern>LOCAL</usagePattern>
+      <description>Error information object</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+    <Property id="35">
+      <name>USER</name>
+      <type class="ComplexType" id="36">UserInfo</type>
+      <usagePattern>INPUT</usagePattern>
+      <description>Authenticated User</description>
+      <requiredOnInput>false</requiredOnInput>
+    </Property>
+  </properties>
+  <maxElementId>108</maxElementId>
+</ProcessModel>

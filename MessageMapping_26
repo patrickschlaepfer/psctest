@@ -1,0 +1,37 @@
+<emds.mapping.proc.MappingScript id="1">
+  <name>map</name>
+  <description></description>
+  <processSenarioID>5c3294cb-1cea-4a7b-99ca-e9d899289af4</processSenarioID>
+  <ID>26</ID>
+  <revisionNumber>1474484791518</revisionNumber>
+  <groupId>4</groupId>
+  <autoDeleteFlag>false</autoDeleteFlag>
+  <imports id="2"/>
+  <namespaceContext id="3">
+    <pairs id="4"/>
+  </namespaceContext>
+  <variables class="linked-list" id="5">
+    <Property id="6">
+      <name>SRC</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="7">5c3294cb-1cea-4a7b-99ca-e9d899289af4:MessageType:24</messageType>
+      <usagePattern>INPUT</usagePattern>
+      <description>input message</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+    <Property id="8">
+      <name>MSG</name>
+      <type class="ArgumentType">message</type>
+      <messageType id="9">5c3294cb-1cea-4a7b-99ca-e9d899289af4:MessageType:25</messageType>
+      <usagePattern>OUTPUT</usagePattern>
+      <description>result message</description>
+      <requiredOnInput>true</requiredOnInput>
+    </Property>
+  </variables>
+  <scriptText>$MSG = $SRC;
+
+// Test</scriptText>
+  <parallelExecution>false</parallelExecution>
+  <useTypedTarget>false</useTypedTarget>
+  <importRevision>0</importRevision>
+</emds.mapping.proc.MappingScript>
